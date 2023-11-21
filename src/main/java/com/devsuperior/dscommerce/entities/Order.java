@@ -78,4 +78,17 @@ public class Order {
     public void setPayment(Payment payment) {
         this.payment = payment;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Order order)) return false;
+
+        return getId() != null ? getId().equals(order.getId()) : order.getId() == null;
+    }
+
+    @Override
+    public int hashCode() {
+        return getId() != null ? getId().hashCode() : 0;
+    }
 }

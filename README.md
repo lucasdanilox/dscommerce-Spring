@@ -31,6 +31,10 @@ pode acessar os cadastros de usuários, produtos e categorias.
 - Springboot
 - SQL
 - Modelo de Domínio e ORM
+- API REST
+- DTO
+- Tratamento de Exceções
+- Bean Validation
 
 # Autor
 

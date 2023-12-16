@@ -35,6 +35,7 @@ pode acessar os cadastros de usuários, produtos e categorias.
 - DTO
 - Tratamento de Exceções
 - Bean Validation
+- JWT
 
 # Autor
 

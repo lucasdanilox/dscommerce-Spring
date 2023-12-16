@@ -40,7 +40,7 @@ public class UserService implements UserDetailsService {
 
         return user;
     }
-
+    //obter usuario logado
     protected User authenticated() {
 
         try {

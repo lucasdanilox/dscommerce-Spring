@@ -4,27 +4,30 @@ import com.devsuperior.dscommerce.entities.OrderItem;
 
 public class OrderItemDTO {
 
-    private Long productid;
+    private Long productId;
     private String name;
     private Double price;
     private Integer quantity;
+    private String imgUrl;
 
-    public OrderItemDTO(Long productid, String name, Double price, Integer quantity) {
-        this.productid = productid;
+    public OrderItemDTO(Long productId, String name, Double price, Integer quantity, String imgUrl) {
+        this.productId = productId;
         this.name = name;
         this.price = price;
         this.quantity = quantity;
+        this.imgUrl = imgUrl;
     }
 
     public OrderItemDTO(OrderItem entity) {
-        this.productid = entity.getProduct().getId();
-        this.name = entity.getProduct().getName();
-        this.price = entity.getPrice();
-        this.quantity = entity.getQuantity();
+        productId = entity.getProduct().getId();
+        name = entity.getProduct().getName();
+        price = entity.getPrice();
+        quantity = entity.getQuantity();
+        imgUrl = entity.getProduct().getImgUrl();
     }
 
     public Long getProductid() {
-        return productid;
+        return productId;
     }
 
     public String getName() {
@@ -41,5 +44,13 @@ public class OrderItemDTO {
 
     public Double getSubTotal(){
         return price * quantity;
+    }
+
+    public Long getProductId() {
+        return productId;
+    }
+
+    public String getImgUrl() {
+        return imgUrl;
     }
 }

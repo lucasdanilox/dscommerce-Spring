@@ -73,14 +73,6 @@
             <artifactId>maven-artifact</artifactId>
             <version>3.2.5</version>
         </dependency>
-
-        <dependency>
-                <groupId>javax.annotation</groupId>
-                <artifactId>javax.annotation-api</artifactId>
-                <version>1.3.2</version>
-                <scope>provided</scope>
-        </dependency>
-
         <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
@@ -103,7 +95,17 @@
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.7</version>
+                <version>0.8.11</version>
+                <configuration>
+                    <excludes>
+                        <exclude>com/devsuperior/dscommerce/DscommerceApplication.class</exclude>
+                        <exclude>com/devsuperior/dscommerce/config/**</exclude>
+                        <exclude>com/devsuperior/dscommerce/entities/**</exclude>
+                        <exclude>com/devsuperior/dscommerce/dto/**</exclude>
+                        <exclude>com/devsuperior/dscommerce/controllers/handlers/**</exclude>
+                        <exclude>com/devsuperior/dscommerce/services/exceptions/**</exclude>
+                    </excludes>
+                </configuration>
                 <executions>
                     <execution>
                         <goals>

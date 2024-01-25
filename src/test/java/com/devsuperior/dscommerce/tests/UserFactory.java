@@ -32,7 +32,7 @@ public class UserFactory {
     public static User createCustomClientUser(Long id, String username) {
 
         User user = new User(id, "Alex", username, "62976573322", LocalDate.parse("2001-02-19"), "$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG");
-        user.addRole(new Role(2L, "ROLE_ADMIN"));
+        user.addRole(new Role(2L, "ROLE_CLIENT"));
         return user;
 
     }

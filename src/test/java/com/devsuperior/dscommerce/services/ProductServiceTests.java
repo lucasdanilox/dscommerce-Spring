@@ -36,6 +36,7 @@ public class ProductServiceTests {
     private long existingProductId, nonExistingProductId;
     private String productName;
     private Product product;
+    private ProductDTO productDTO;
     private PageImpl<Product> page;
 
     @BeforeEach
@@ -48,10 +49,12 @@ public class ProductServiceTests {
 
         product = ProductFactory.createProducts(productName);
         page = new PageImpl<>(List.of(product));
+        productDTO = new ProductDTO(product);
 
         Mockito.when(repository.findById(existingProductId)).thenReturn(Optional.of(product));
         Mockito.when(repository.findById(nonExistingProductId)).thenReturn(Optional.empty());
         Mockito.when(repository.searchByName(any(), (Pageable) any())).thenReturn(page);
+        Mockito.when(repository.save(any())).thenReturn(product);
 
     }
 
@@ -85,7 +88,16 @@ public class ProductServiceTests {
         Assertions.assertEquals(result.getSize(), 1);
         Assertions.assertEquals(result.iterator().next().getName(), productName);
 
+    }
 
+    @Test
+    public void InsertShouldReturnProductDTO() {
+
+        ProductDTO result = service.insert(productDTO);
+
+        Assertions.assertNotNull(result);
+        Assertions.assertEquals(result.getId(), product.getId());
+        Assertions.assertEquals(result.getName(), product.getName());
     }
 
 

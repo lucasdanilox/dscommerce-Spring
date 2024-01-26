@@ -3,6 +3,9 @@ package com.devsuperior.dscommerce.dto;
 import com.devsuperior.dscommerce.entities.Order;
 import com.devsuperior.dscommerce.entities.OrderItem;
 import com.devsuperior.dscommerce.entities.OrderStatus;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotEmpty;
 
 import java.time.Instant;
@@ -63,6 +66,7 @@ public class OrderDTO {
     public List<OrderItemDTO> getItems() {
         return items;
     }
+
 
     public Double getTotal() {
         double soma = 0.0;

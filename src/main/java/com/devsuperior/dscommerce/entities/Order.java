@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 
 import java.time.Instant;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -38,6 +39,7 @@ public class Order {
         this.client = client;
         this.payment = payment;
     }
+
 
     public Long getId() {
         return id;
@@ -82,6 +84,8 @@ public class Order {
     public Set<OrderItem> getItems() {
         return items;
     }
+
+
 
     @Override
     public boolean equals(Object o) {

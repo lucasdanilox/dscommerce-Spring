@@ -98,13 +98,15 @@
                 <version>0.8.11</version>
                 <configuration>
                     <excludes>
-                        <exclude>com/devsuperior/dscommerce/DscommerceApplication.class</exclude>
+                        <exclude>com/devsuperior/dscommerce/DScommerceDevsuperiorApplication.class</exclude>
                         <exclude>com/devsuperior/dscommerce/config/**</exclude>
                         <exclude>com/devsuperior/dscommerce/entities/**</exclude>
                         <exclude>com/devsuperior/dscommerce/dto/**</exclude>
                         <exclude>com/devsuperior/dscommerce/controllers/handlers/**</exclude>
                         <exclude>com/devsuperior/dscommerce/services/exceptions/**</exclude>
                         <exclude>com/devsuperior/dscommerce/util/**</exclude>
+                        <exclude>com/devsuperior/dscommerce/controllers/**</exclude>
+
                     </excludes>
                 </configuration>
                 <executions>

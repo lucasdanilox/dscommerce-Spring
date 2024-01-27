@@ -154,7 +154,7 @@ public class OrderServiceTests {
     }
 
     @Test
-    public void insertShouldThrowsEntityNotFoundExceptionWWhenOrderProductIdDoesNotExist() {
+    public void insertShouldThrowsEntityNotFoundExceptionWhenOrderProductIdDoesNotExist() {
 
         Mockito.when(userService.authenticated()).thenReturn(client);
 
